@@ -10,22 +10,22 @@ const playBrainCalc = () => {
 
   const generateQA = () => {
     for (let i = 0; i < 3; i += 1) {
-      const number = getRandomInt(10);
-      const anotherNumber = getRandomInt(10);
+      const number1 = getRandomInt(10);
+      const number2 = getRandomInt(10);
       const symbol = symbols[getRandomInt(3)];
-      const question = `Question: ${number} ${symbol} ${anotherNumber}`;
+      const question = `Question: ${number1} ${symbol} ${number2}`;
       let correctAnswer = 0;
       switch (symbol) {
         case '+':
-          correctAnswer = String(evaluate(number + anotherNumber));
+          correctAnswer = String(evaluate(number1 + number2));
           break;
 
         case '-':
-          correctAnswer = String(evaluate(number - anotherNumber));
+          correctAnswer = String(evaluate(number1 - number2));
           break;
 
         case '*':
-          correctAnswer = String(evaluate(number * anotherNumber));
+          correctAnswer = String(evaluate(number1 * number2));
           break;
 
         default:

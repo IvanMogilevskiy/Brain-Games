@@ -9,7 +9,7 @@ const playBrainGames = (inputForEngine) => {
   const QAPairs = cdr(inputForEngine);
   console.log(rules);
 
-  /* eslint-disable-next-line */
+  /* eslint-disable-next-line no-restricted-syntax */
   for (const QAPair of QAPairs) {
     const question = car(QAPair);
     const correctAnswer = cdr(QAPair);
