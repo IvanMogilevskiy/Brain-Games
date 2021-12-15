@@ -1,8 +1,9 @@
+import getRandomInt from './randomizer.js';
+
 const makeProgression = () => {
   const numbers = [];
-  const getRandomInt = (max) => Math.ceil(Math.random() * max);
-  let number = getRandomInt(10);
-  const progressionStep = getRandomInt(10);
+  let number = getRandomInt(0, 11);
+  const progressionStep = getRandomInt(1, 11);
   numbers.push(number);
 
   for (let i = 0; i < 9; i += 1) {

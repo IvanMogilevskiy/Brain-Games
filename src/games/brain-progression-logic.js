@@ -1,16 +1,16 @@
 import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
 import makeProgression from './progression.js';
+import getRandomInt from './randomizer.js';
 
 const playBrainProgression = () => {
   const rules = 'What number is missing in the progression?';
-  const getRandomInt = (max) => Math.floor(Math.random() * max);
   const QAPairs = [];
 
   const generateQA = () => {
     for (let i = 0; i < 3; i += 1) {
       const numbers = makeProgression();
-      const randomIndex = getRandomInt(numbers.length);
+      const randomIndex = getRandomInt(0, numbers.length);
       const correctAnswer = String(numbers[randomIndex]);
       numbers[randomIndex] = '..';
       const progression = numbers.join(' ');
