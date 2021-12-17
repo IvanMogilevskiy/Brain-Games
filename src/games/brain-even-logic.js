@@ -10,7 +10,7 @@ const playBrainEven = () => {
     for (let i = 0; i < 3; i += 1) {
       const number = getRandomInt(0, 30);
       const isEven = () => number % 2 === 0;
-      const question = `Question: ${number}`;
+      const question = `${number}`;
       const correctAnswer = isEven(number) ? 'yes' : 'no';
       const QAPair = cons(question, correctAnswer);
 

@@ -13,7 +13,7 @@ const playBrainCalc = () => {
       const number1 = getRandomInt(0, 11);
       const number2 = getRandomInt(0, 11);
       const symbol = symbols[getRandomInt(0, 3)];
-      const question = `Question: ${number1} ${symbol} ${number2}`;
+      const question = `${number1} ${symbol} ${number2}`;
       let correctAnswer = 0;
       switch (symbol) {
         case '+':

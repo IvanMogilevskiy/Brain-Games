@@ -11,7 +11,7 @@ const playBrainGCD = () => {
     for (let i = 0; i < 3; i += 1) {
       const number1 = getRandomInt(0, 11);
       const number2 = getRandomInt(0, 11);
-      const question = `Question: ${number1} ${number2}`;
+      const question = `${number1} ${number2}`;
       const correctAnswer = String(gcd(number1, number2));
       const QAPair = cons(question, correctAnswer);
 

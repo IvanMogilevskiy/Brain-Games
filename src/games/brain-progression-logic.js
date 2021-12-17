@@ -14,7 +14,7 @@ const playBrainProgression = () => {
       const correctAnswer = String(numbers[randomIndex]);
       numbers[randomIndex] = '..';
       const progression = numbers.join(' ');
-      const question = `Question: ${progression}`;
+      const question = `${progression}`;
       const QAPair = cons(question, correctAnswer);
 
       QAPairs.push(QAPair);

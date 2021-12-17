@@ -10,7 +10,7 @@ const playBrainPrime = () => {
   const generateQA = () => {
     for (let i = 0; i < 3; i += 1) {
       const number = getRandomInt(0, 100);
-      const question = `Question: ${number}`;
+      const question = `${number}`;
       const correctAnswer = isPrime(number) ? 'yes' : 'no';
       const QAPair = cons(question, correctAnswer);
 

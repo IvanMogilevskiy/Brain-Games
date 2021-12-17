@@ -13,7 +13,7 @@ const playBrainGames = (inputForEngine) => {
   for (const QAPair of QAPairs) {
     const question = car(QAPair);
 
-    console.log(question);
+    console.log(`Question: ${question}`);
 
     const correctAnswer = cdr(QAPair);
     const answer = readlineSync.question(`Your answer: `);
