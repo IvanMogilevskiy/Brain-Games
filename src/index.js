@@ -12,10 +12,11 @@ const playBrainGames = (inputForEngine) => {
   /* eslint-disable-next-line no-restricted-syntax */
   for (const QAPair of QAPairs) {
     const question = car(QAPair);
-    const correctAnswer = cdr(QAPair);
-    const answer = readlineSync.question(question);
 
-    console.log(`Your answer: ${answer}`);
+    console.log(question);
+
+    const correctAnswer = cdr(QAPair);
+    const answer = readlineSync.question(`Your answer: `);
 
     if (answer !== correctAnswer) {
       console.log(
