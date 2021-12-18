@@ -3,7 +3,7 @@ import { car, cdr } from '@hexlet/pairs';
 
 const playBrainGames = (inputForEngine) => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name?');
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   const rules = car(inputForEngine);
   const QAPairs = cdr(inputForEngine);
