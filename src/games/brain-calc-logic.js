@@ -1,4 +1,4 @@
-import { evaluate } from 'mathjs';
+// import { evaluate } from 'mathjs';
 import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
 import getRandomInt from './randomizer.js';
@@ -17,19 +17,19 @@ const playBrainCalc = () => {
       let correctAnswer = 0;
       switch (symbol) {
         case '+':
-          correctAnswer = String(evaluate(number1 + number2));
+          correctAnswer = String(number1 + number2);
           break;
 
         case '-':
-          correctAnswer = String(evaluate(number1 - number2));
+          correctAnswer = String(number1 - number2);
           break;
 
         case '*':
-          correctAnswer = String(evaluate(number1 * number2));
+          correctAnswer = String(number1 * number2);
           break;
 
         default:
-          correctAnswer = NaN;
+          correctAnswer = null;
           break;
       }
       const QAPair = cons(question, correctAnswer);
