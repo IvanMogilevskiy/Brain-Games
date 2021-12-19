@@ -1,4 +1,3 @@
-// import { evaluate } from 'mathjs';
 import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
 import getRandomInt from './randomizer.js';
