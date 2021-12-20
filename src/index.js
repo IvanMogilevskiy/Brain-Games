@@ -16,11 +16,11 @@ const playBrainGames = (inputForEngine) => {
     console.log(`Question: ${question}`);
 
     const correctAnswer = cdr(QAPair);
-    const answer = readlineSync.question(`Your answer: `);
+    const answer = readlineSync.question('Your answer: ');
 
     if (answer !== correctAnswer) {
       console.log(
-        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${name}!`
+        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${name}!`,
       );
       break;
     }
