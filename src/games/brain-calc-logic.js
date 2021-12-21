@@ -28,8 +28,7 @@ const playBrainCalc = () => {
           break;
 
         default:
-          correctAnswer = null;
-          break;
+          throw new Error('The format of the operation is incorrect');
       }
       const QAPair = cons(question, correctAnswer);
 
