@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
-import getRandomInt from './randomizer.js';
+import getRandomInt from '../randomizer.js';
 
 const playBrainEven = () => {
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';

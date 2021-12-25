@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
-import getRandomInt from './randomizer.js';
+import getRandomInt from '../randomizer.js';
 
 const playBrainProgression = () => {
   const task = 'What number is missing in the progression?';

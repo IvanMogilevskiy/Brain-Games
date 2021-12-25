@@ -1,12 +1,25 @@
 import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
-import isPrime from './isPrime.js';
-import getRandomInt from './randomizer.js';
+import getRandomInt from '../randomizer.js';
 
 const playBrainPrime = () => {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const qaPairs = [];
   const numberOfRounds = 3;
+
+  const isPrime = (number) => {
+    if (number < 2) {
+      return false;
+    }
+
+    for (let i = 2; i <= number / 2; i += 1) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
+  };
 
   const generateQA = () => {
     for (let i = 0; i < numberOfRounds; i += 1) {
