@@ -3,15 +3,17 @@ import playBrainGames from '../index.js';
 import getRandomInt from './randomizer.js';
 
 const playBrainProgression = () => {
-  const rules = 'What number is missing in the progression?';
-  const QAPairs = [];
+  const task = 'What number is missing in the progression?';
+  const qaPairs = [];
+  const numberOfRounds = 3;
+  const progressionLength = 8;
 
   const makeProgression = (firstNumber, progressionStep) => {
     const numbers = [];
     numbers.push(firstNumber);
     let number = firstNumber + progressionStep;
     numbers.push(number);
-    for (let i = 0; i < 8; i += 1) {
+    for (let i = 0; i < progressionLength; i += 1) {
       number += progressionStep;
       numbers.push(number);
     }
@@ -19,20 +21,19 @@ const playBrainProgression = () => {
   };
 
   const generateQA = () => {
-    for (let i = 0; i < 3; i += 1) {
+    for (let i = 0; i < numberOfRounds; i += 1) {
       const numbers = makeProgression(getRandomInt(0, 11), getRandomInt(1, 11));
       const randomIndex = getRandomInt(0, numbers.length);
       const correctAnswer = String(numbers[randomIndex]);
       numbers[randomIndex] = '..';
-      const progression = numbers.join(' ');
-      const question = `${progression}`;
-      const QAPair = cons(question, correctAnswer);
+      const question = numbers.join(' ');
+      const qaPair = cons(question, correctAnswer);
 
-      QAPairs.push(QAPair);
+      qaPairs.push(qaPair);
     }
   };
   generateQA();
-  const inputForEngine = cons(rules, QAPairs);
+  const inputForEngine = cons(task, qaPairs);
   playBrainGames(inputForEngine);
 };
 
