@@ -1,4 +1,3 @@
-import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
 import getRandomInt from '../randomizer.js';
 
@@ -32,13 +31,13 @@ const playBrainCalc = () => {
         default:
           throw new Error('The format of the operation is incorrect');
       }
-      const qaPair = cons(question, correctAnswer);
+      const qaPair = [question, correctAnswer];
 
       qaPairs.push(qaPair);
     }
   };
   generateQA();
-  const inputForEngine = cons(task, qaPairs);
+  const inputForEngine = [task, qaPairs];
   playBrainGames(inputForEngine);
 };
 export default playBrainCalc;

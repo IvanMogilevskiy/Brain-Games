@@ -1,4 +1,3 @@
-import { cons } from '@hexlet/pairs';
 import playBrainGames from '../index.js';
 import getRandomInt from '../randomizer.js';
 
@@ -26,13 +25,13 @@ const playBrainPrime = () => {
       const number = getRandomInt(0, 100);
       const question = `${number}`;
       const correctAnswer = isPrime(number) ? 'yes' : 'no';
-      const qaPair = cons(question, correctAnswer);
+      const qaPair = [question, correctAnswer];
 
       qaPairs.push(qaPair);
     }
   };
   generateQA();
-  const inputForEngine = cons(task, qaPairs);
+  const inputForEngine = [task, qaPairs];
   playBrainGames(inputForEngine);
 };
 

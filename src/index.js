@@ -1,21 +1,18 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from '@hexlet/pairs';
 
 const playBrainGames = (inputForEngine) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  const task = car(inputForEngine);
-  const qaPairs = cdr(inputForEngine);
+  const [task, qaPairs] = inputForEngine;
   console.log(task);
 
   /* eslint-disable-next-line no-restricted-syntax */
   for (const qaPair of qaPairs) {
-    const question = car(qaPair);
+    const [question, correctAnswer] = qaPair;
 
     console.log(`Question: ${question}`);
 
-    const correctAnswer = cdr(qaPair);
     const answer = readlineSync.question('Your answer: ');
 
     if (answer !== correctAnswer) {
