@@ -32,7 +32,7 @@ brain-prime
 brain-progression
 ```
 
-This repository was created by Ivan Mogilevskiy as the first educational project on [Hexlet courses](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=nodejs-package). The project is a set of text-based logic games.
+The project is a set of text-based logic games.
 
 [![asciicast](https://asciinema.org/a/UHXU2ALFbvVCDZ2kMIyHUj8F2.svg)](https://asciinema.org/a/UHXU2ALFbvVCDZ2kMIyHUj8F2)
 [![asciicast](https://asciinema.org/a/1pb3ovU6AV0BA7rFpbRcKz78g.svg)](https://asciinema.org/a/1pb3ovU6AV0BA7rFpbRcKz78g)
